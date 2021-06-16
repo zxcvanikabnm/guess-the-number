@@ -14,6 +14,8 @@
 // Variable to store the list of guesses 
 
 // Variable for store the correct random number 
+let correctNumber = getRandomNumber();
+console.log(correctNumber);
 
 
 window.onload = function() {
@@ -61,6 +63,10 @@ function resetResultContent(){
  */
 function getRandomNumber(){
   // *CODE GOES BELOW HERE *
+  let randomNumber = Math.random();
+  let wholeNumber = Math.floor(randomNumber * 100) + 1;
+  
+  return wholeNumber;
 }
 
 /**
