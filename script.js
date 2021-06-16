@@ -15,7 +15,7 @@
 
 // Variable for store the correct random number 
 let correctNumber = getRandomNumber();
-console.log(correctNumber);
+console.log(`Correct Number: ${correctNumber}`);
 
 
 window.onload = function() {
@@ -31,7 +31,17 @@ function playGame(){
 
   // Get user value from input and save it to variable numberGuess
   let numberGuess = document.getElementById("number-guess").value;
-  console.log(numberGuess);
+  console.log(`Number Guess: ${numberGuess}`);
+
+  if (numberGuess > correctNumber) {
+    console.log("too high");
+  }
+  else if (numberGuess < correctNumber) {
+    console.log("too low");
+  }
+  else {
+    console.log("you won");
+  }
 }
 
 /**
