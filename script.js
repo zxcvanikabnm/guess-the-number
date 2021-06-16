@@ -26,6 +26,10 @@ window.onload = function() {
  */
 function playGame(){
   // *CODE GOES BELOW HERE *
+
+  // Get user value from input and save it to variable numberGuess
+  let numberGuess = document.getElementById("number-guess").value;
+  console.log(numberGuess);
 }
 
 /**
