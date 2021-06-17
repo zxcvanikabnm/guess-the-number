@@ -33,6 +33,15 @@ function playGame(){
   let numberGuess = document.getElementById("number-guess").value;
   console.log(`Number Guess: ${numberGuess}`);
 
+  displayResult(numberGuess);
+}
+
+/**
+ * Show the result for if the guess it too high, too low, or correct
+ * HINT: Use if, else if, else statement 
+ */
+// *CODE GOES BELOW HERE *
+function displayResult(numberGuess) {
   if (numberGuess > correctNumber) {
     console.log("too high");
   }
@@ -43,12 +52,6 @@ function playGame(){
     console.log("you won");
   }
 }
-
-/**
- * Show the result for if the guess it too high, too low, or correct
- * HINT: Use if, else if, else statement 
- */
-// *CODE GOES BELOW HERE *
 
 
 
