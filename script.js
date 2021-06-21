@@ -21,7 +21,6 @@ console.log(`Correct Number: ${correctNumber}`);
 window.onload = function() {
     document.getElementById("number-submit").addEventListener("click", playGame);
     document.getElementById("restart-game").addEventListener("click", initGame);
-    showYouWon();
 }
 
 /**
@@ -44,13 +43,13 @@ function playGame(){
 // *CODE GOES BELOW HERE *
 function displayResult(numberGuess) {
   if (numberGuess > correctNumber) {
-    console.log("too high");
+    showNumberAbove();
   }
   else if (numberGuess < correctNumber) {
-    console.log("too low");
+    showNumberBelow();
   }
   else {
-    console.log("you won");
+    showYouWon();
   }
 }
 
