@@ -20,7 +20,8 @@ console.log(`Correct Number: ${correctNumber}`);
 
 window.onload = function() {
     document.getElementById("number-submit").addEventListener("click", playGame);
-    document.getElementById("restart-game").addEventListener("click", initGame)
+    document.getElementById("restart-game").addEventListener("click", initGame);
+    showYouWon();
 }
 
 /**
@@ -122,8 +123,8 @@ function getDialog(dialogType, text){
       dialog = "<div class='alert alert-success' role='alert'>"
       break;
   }
-  dialog += text;
-  dialog += "</div>"
+  dialog = dialog + text;
+  dialog = dialog + "</div>"
   return dialog;
 }
 
@@ -135,7 +136,7 @@ function showYouWon(){
    * HINT: Use the 'won' and text parameters 
    */
   // *CODE GOES BELOW HERE *
-
+  let dialog = getDialog("won", text)
   document.getElementById("result").innerHTML = dialog;
 }
 
@@ -147,7 +148,7 @@ function showNumberAbove(){
    * HINT: Use the 'warning' and text parameters 
    */
   // *CODE GOES BELOW HERE *
-
+  let dialog = getDialog("warning", text);
   document.getElementById("result").innerHTML = dialog;
 }
 
@@ -159,6 +160,6 @@ function showNumberBelow(){
    * HINT: Use the 'warning' and text parameters 
    */
   // *CODE GOES BELOW HERE *
-
+  let dialog = getDialog("warning", text);
   document.getElementById("result").innerHTML = dialog;
 }
