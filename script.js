@@ -37,6 +37,8 @@ function playGame() {
   displayResult(numberGuess);
   saveGuessHistory(numberGuess);
   displayHistory();
+  // Clears input
+  document.getElementById("number-guess").value = '';
 }
 
 /**
@@ -64,6 +66,12 @@ function displayResult(numberGuess) {
  */
 function initGame() {
   // *CODE GOES BELOW HERE *
+
+  correctNumber = getRandomNumber();
+  document.getElementById("result").innerHTML = "";
+  guesses = [];
+  displayHistory();
+  console.log(`Correct Number: ${correctNumber}`);
 }
 
 /**
